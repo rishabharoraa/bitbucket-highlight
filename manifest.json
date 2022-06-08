@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "author": "Rishabh Arora",
+    "name": "bitbucket-highlighter",
+    "description": "Code highlighter for bitbucket PRs",
+    "version": "0.0.1",
+    "icons": {
+        "16": "./media/Logo16.png",
+        "48": "./media/Logo48.png",
+        "128": "./media/Logo128.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "./media/Logo16.png",
+            "48": "./media/Logo48.png",
+            "128": "./media/Logo128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://bitbucket.org/*"],
+            "js": ["./src/highlight.js"]
+        }
+    ]
+}
